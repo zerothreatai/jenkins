@@ -1,28 +1,29 @@
-# zt-test-jenkins
+# Zero Threat AI Powered Security Scanner
 
-## Introduction
+Secure your code proactively. Use the ZeroThreat AI Powered Web Application/API Security Scanner to perform Dynamic Application Security Testing (DAST). It enables comprehensive Dynamic Application Security Testing (DAST) to detect vulnerabilities, making findings readily available on the ZeroThreat Portal for review.
 
-TODO Describe what your plugin does here
+## Inputs
 
-## Getting started
+| Input               | Description                                                          | Required | Default |
+| ------------------- | -------------------------------------------------------------------- | -------- | ------- |
+| `ZT_TOKEN`          | ZT_TOKEN to authenticate API request & start the scan.               | Yes      |         |
+| `WAIT_FOR_ANALYSIS` | Set this true to wait for analysis to complete before finishing job. | No       | false   |
 
-TODO Tell users how to configure your plugin here, include screenshots, pipeline examples and 
-configuration-as-code examples.
 
-## Issues
+## How It Works
 
-TODO Decide where you're going to host your issues, the default is Jenkins JIRA, but you can also enable GitHub issues,
-If you use GitHub issues there's no need for this section; else add the following line:
+1. **ZeroThreat AI Scanner**: The DAST scan is triggered by passing the `zt_token`. Each token corresponds to a specific target defined within the ZeroThreat application. Upon receiving the token, the ZeroThreat DevOps Bot executes prerequisite checks before commencing the scan process.
+2. **Scan Report**: As soon as the ZeroThreat DevOps Bot starts the security scan, The scan report will be available in the ZeroThreat Portal.
 
-Report issues and enhancements in the [Jenkins issue tracker](https://issues.jenkins.io/).
+### Secrets Setup
+1. Generate the `zt_token` from the ZeroThreat Portal.
+   
+2. Add the secret where needed:
+    - `zt_token`: ZT_TOKEN to authenticate API request & start the scan.
 
-## Contributing
 
-TODO review the default [CONTRIBUTING](https://github.com/jenkinsci/.github/blob/master/CONTRIBUTING.md) file and make sure it is appropriate for your plugin, if not then add your own one adapted from the base file
+## Notes
 
-Refer to our [contribution guidelines](https://github.com/jenkinsci/.github/blob/master/CONTRIBUTING.md)
-
-## LICENSE
-
-Licensed under MIT, see [LICENSE](LICENSE.md)
+- Ensure secrets are correctly configured in Jenkins respective area of the project for scan initiation. 
+- ZeroThreat offers a centralized dashboard displaying all scan results.
 
