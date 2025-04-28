@@ -11,7 +11,7 @@
 
   <groupId>io.jenkins.plugins</groupId>
   <artifactId>zerothreat-dast-scanner</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>0.0.1</version>
   <packaging>hpi</packaging>
 
   <name>ZeroThreat AI DAST Scanner</name>
@@ -33,10 +33,8 @@
   </scm>
 
   <properties>
-    <revision>1.0</revision>
-    <changelist>-SNAPSHOT</changelist>
-    <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-    <jenkins.version>2.492.3</jenkins.version>
+    <jenkins.baseline>2.492</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.3</jenkins.version>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
 
     <spotless.check.skip>false</spotless.check.skip>
@@ -46,8 +44,8 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.440.x</artifactId>
-        <version>3193.v330d8248d39e</version>
+        <artifactId>bom-2.492.x</artifactId>
+        <version>4669.v0e99c712a_30e</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
