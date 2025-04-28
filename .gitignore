@@ -9,7 +9,9 @@ work
 *.ipr
 .idea
 
+.vscode
 # Eclipse project files
 .settings
 .classpath
 .project
+
