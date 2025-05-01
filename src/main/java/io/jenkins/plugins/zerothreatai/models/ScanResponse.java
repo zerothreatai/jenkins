@@ -6,6 +6,7 @@ public class ScanResponse {
     public String Code = "";
     public int ScanStatus = 0;
     public String Url = "";
+    public String TimeStamp = "";
 
     public ScanResponse() {
     }
